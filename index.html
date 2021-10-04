@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap" rel="stylesheet">
-     <title>Storefront Name</title>
-    </head>
-    <body>
-        <header>
-        
-        <div class="navbar" id="navbar">
-            <a id = "home" href="#home" class="active">Home</a>
-            <a id = "shop" href="#about">Shop</a>
-            <a id = "user" href="#blog">User</a>
-            <a id = "cart" href="#cart">Cart</a>
-            <a class="about-us">About Us</a>
-            </a>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hind:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Storefront Name</title>
+  </head>
+  <body>
+    <header>
+      <nav class="flexbox">
+        <!-- <div class="navbar" id="navbar"> -->
+        <ul id="nav-text">
+          <li id="store-name">Store Name</li>
+          <li><input placeholder="Search" type="text" class="search" /></li>
+          <div>
+            <li><a id="user">User</a></li>
+            <li><a id="cart">Cart</a></li>
           </div>
-          <div class="header-image"><h1 class ="header-text">Store Name Here</h1></div>
-
-        </header>
-    </body>
+        </ul>
+        <!-- </div> -->
+      </nav>
+      <div class="header-image">
+        <h1 class="header-text">Store Name Here</h1>
+      </div>
+    </header>
+    <div class="items">
+      <h3 id="product-name">Product Name Here</h3>
+      <img src="img/250.png" id="product-image" />
+      <ul>
+        <li id="price">Price</li>
+        <li id="to-cart">Add to Cart</li>
+        <li id="description">Description</li>
+      </ul>
+    </div>
+  </body>
 </html>

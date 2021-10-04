@@ -1,51 +1,108 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
 }
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 header {
-    margin: 0px;
+  margin: 0px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .header-image {
-  margin:0;
+  position: relative;
+  margin: 0;
   width: 100%;
   height: 400px;
-  object-fit: contain;
-  background: url('img/header-placeholder.jpg');
-  filter: grayscale(100%);
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: url("img/header-placeholder.jpg");
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   background-size: cover;
 }
 
 .header-image .header-text {
   margin: 0;
-  text-align: center;
+  position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Abril Fatface", cursive;
+  -webkit-filter: drop-shadow(0.05em 0.05em #77746d);
+          filter: drop-shadow(0.05em 0.05em #77746d);
 }
 
-.navbar {
-    background-color: rgb(73, 80, 87);
-    margin: 0px;
-    overflow: hidden;
-  }
-
-.navbar a {
-    float: left;
-    display: block;
-    color: rgb(233, 236, 239);
-    text-align: center;
-    padding: 14px 16px;
-    font-family:'Kaisei Tokumin', serif;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-.navbar a:hover {
-    color: rgb(233, 236, 239);
-  }
-/*h1 {
-    font-family:'Kaisei Tokumin', serif;
-    font-weight: bold;
-    position: fixed;
-    top: 50%;
-    left: 50%;
+.flexbox {
+  width: 100%;
+  display: inline-block;
 }
+
+nav.flexbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #495057;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Hind", sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+nav.flexbox ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+nav.flexbox ul li {
+  width: 100%;
+}
+
+.items {
+  margin: 10px;
+}
+
+.items h3 {
+  font-family: "Abril Fatface", cursive;
+}
+
+.items ul {
+  list-style-type: none;
+  font-family: "Hind", sans-serif;
+}
+
+.items ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.items ul li:last-child {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
