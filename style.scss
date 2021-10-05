@@ -41,21 +41,6 @@ header {
   filter: drop-shadow(0.05em 0.05em rgb(119, 116, 109));
 }
 
-// .navbar {
-//   background-color: rgb(73, 80, 87);
-//   margin: 0px;
-//   overflow: hidden;
-// }
-
-// .navbar #nav-text li {
-//   display: block;
-//   color: rgb(233, 236, 239);
-//   padding: 8px 12px;
-//   font-family: "Hind", sans-serif;
-//   text-decoration: none;
-//   font-size: 17px;
-// }
-
 .flexbox {
   width: 100%;
   display: inline-block;
@@ -64,11 +49,10 @@ header {
 nav.flexbox {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   overflow: hidden;
   background-color: rgb(73, 80, 87);
-  // justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   font-family: "Hind", sans-serif;
   font-size: 17px;
   text-decoration: none;
@@ -82,11 +66,24 @@ nav.flexbox {
 
   ul li {
     width: 100%;
+    display: flex;
+
+    //   #nav-text-right {
+    //     float: right;
+    //   }
   }
+
+  // #nav-text-right {
+  //   float: right;
+  // }
+  // }
 }
 
 .items {
   margin: 10px;
+  max-width: 25%;
+  justify-content: center;
+  flex-wrap: wrap;
   h3 {
     font-family: "Abril Fatface", cursive;
   }
@@ -97,9 +94,10 @@ nav.flexbox {
   ul li {
     display: inline;
     margin-right: 10px;
-
-    &:last-child {
-      display: block;
-    }
   }
+  // .item-holder {
+  //   max-width: 25%;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  // }
 }

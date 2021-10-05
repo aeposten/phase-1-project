@@ -57,13 +57,8 @@ nav.flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   overflow: hidden;
   background-color: #495057;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-family: "Hind", sans-serif;
   font-size: 17px;
   text-decoration: none;
@@ -82,10 +77,19 @@ nav.flexbox ul {
 
 nav.flexbox ul li {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .items {
   margin: 10px;
+  max-width: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .items h3 {
@@ -100,9 +104,5 @@ nav.flexbox ul li {
 .items ul li {
   display: inline;
   margin-right: 10px;
-}
-
-.items ul li:last-child {
-  display: block;
 }
 /*# sourceMappingURL=style.css.map */
