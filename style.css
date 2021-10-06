@@ -1,4 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hind:wght@300&display=swap");
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
+  font-family: "Hind", sans-serif;
   margin: 0px;
   margin: 0px;
   padding: 0px;
@@ -15,13 +25,6 @@ header {
   margin: 0px;
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 .header-image {
   position: relative;
   margin: 0;
@@ -29,7 +32,7 @@ header {
   height: 400px;
   -o-object-fit: contain;
      object-fit: contain;
-  background: url("img/header-placeholder.jpg");
+  background: url("https://i.ibb.co/PNgkhnt/header-placeholder.jpg");
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   background-size: cover;
@@ -47,49 +50,126 @@ header {
           filter: drop-shadow(0.05em 0.05em #77746d);
 }
 
-.flexbox {
-  width: 100%;
-  display: inline-block;
+nav {
+  padding: 20px 0 40px 0;
+  background: #495057;
+  font-size: 16px;
+  font-family: "Hind", sans-serif;
 }
 
-nav.flexbox {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  background-color: #495057;
-  font-family: "Hind", sans-serif;
-  font-size: 17px;
+nav .navbar-left {
+  float: left;
+}
+
+nav .navbar-right {
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 20px;
+}
+
+nav ul li a {
+  color: black;
   text-decoration: none;
 }
 
-nav.flexbox ul {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style-type: none;
+.num {
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-nav.flexbox ul li {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.shopping-cart {
+  display: none;
+  margin: 20px 0;
+  position: relative;
+  float: right;
+  background: white;
+  width: 320px;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.shopping-cart .shopping-cart-header {
+  border: #ced4da;
+  padding-bottom: 15px;
+}
+
+.shopping-cart .shopping-cart-header .shopping-cart-total {
+  float: right;
+}
+
+.shopping-cart-items {
+  padding-top: 20px;
+}
+
+.shopping-cart-items li {
+  margin-bottom: 17px;
+}
+
+.shopping-cart-items img {
+  float: left;
+  margin-right: 12px;
+  height: 50px;
+  width: 50px;
+}
+
+.shopping-cart-items .item-name {
+  display: block;
+  padding-top: 10px;
+  font-size: 17px;
+}
+
+.shopping-cart-items .item-price {
+  color: black;
+  margin-right: 10px;
+}
+
+.shopping-cart-items .item-quantity {
+  color: black;
+}
+
+.shopping-cart:after {
+  bottom: 100%;
+  float: right;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  pointer-events: none;
+  border-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.button {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 17px;
+  margin: 25px 0 15px 0;
 }
 
 .items {
   margin: 10px;
-  max-width: 25%;
+  width: 20%;
+  height: 20%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: inline-block;
 }
 
 .items h3 {
@@ -104,5 +184,13 @@ nav.flexbox ul li {
 .items ul li {
   display: inline;
   margin-right: 10px;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
 }
 /*# sourceMappingURL=style.css.map */

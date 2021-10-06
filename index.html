@@ -8,34 +8,63 @@
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hind:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous" defer></script>
     <title>Storefront Name</title>
   </head>
   <body>
-    <header>
-      <nav class="flexbox">
-        <ul id="nav-text-left">
-          <li id="store-name">Store Name</li>
-          <li><input placeholder="Search" type="text" class="search" /></li>
+    <nav>
+      <div class="navbar">
+        <ul class="navbar-left">
+          <li>Store Name</li>
+        <li><input placeholder="Search" type="text" class="search" /></li>
         </ul>
-        <ul id="nav-text-right">
-          <li><a id="cart">Cart</a></li>
-        </ul>
-      </nav>
-      <div class="header-image">
-        <h1 class="header-text">Store Name Here</h1>
+    
+        <ul class="navbar-right">
+          <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i>Cart <div class="num">num</div></a></li>
+        </ul> 
+      </div> 
+    </nav>
+    
+    
+    <div class="cart-holder">
+      <div class="shopping-cart">
+        <div class="shopping-cart-header">
+          <i class="fa fa-shopping-cart cart-icon"></i><span class="num">num</span>
+          <div class="shopping-cart-total">Total:
+            <div class="amt">amt</s>
+          </div>
+        </div> 
+        <ul class="shopping-cart-items">
+          <li class="dropdown">
+            <img src=""/>
+            <span>Product Name</span>
+            <span class="item-price">$price</span>
+            <span class="quantity">Quantity:</span>
+          </li>
+        <a href="#" class="button">Checkout</a>
       </div>
-    </header>
-    <!-- <div class="item-holder"> -->
-    <div class="items">
-      <h3 id="product-name">Product Name Here</h3>
-      <img src="img/250.png" id="product-image" />
-      <ul>
-        <li id="price">Price</li>
-        <li id="to-cart">Add to Cart</li>
-        <li id="description">Description</li>
-      </ul>
+    </div> 
     </div>
-    <!-- </div> -->
+          <div class="header-image">
+            <h1 class="header-text">Store Name Here</h1>
+          </div>
+        </header>
+        <div class="items">
+          <h3 class="product-name">Product Name Here</h3>
+          <img src="img/250.png" id="product-image" />
+          <ul>
+            <li id="price">Price</li>
+            <li id="to-cart">Add to Cart</li>
+            <details>
+              <summary>Description</summary>
+              <li id="description">Description</li>
+            </details>
+          </ul>
+        </div>
     <script type="text/javascript" src="script.js" defer></script>
+    <script type="text/javascript" src="jquery.js" defer></script>
   </body>
 </html>
