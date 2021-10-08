@@ -19,16 +19,13 @@
       <div class="navbar">
         <ul class="navbar-left">
           <li>Store Name</li>
-        <li><input placeholder="Search" type="text" class="search"/><button class="search-button" type="button">Search</button></li>
+        <li><input placeholder="Search" type="text" class="search"/><button class="num" type="button">Search</button></li>
         </ul>
-    
         <ul class="navbar-right">
           <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i>Cart <div class="num">num</div></a></li>
-        </ul> 
-      </div> 
+        </ul>
+      </div>
     </nav>
-    
-    
     <div class="cart-holder">
       <div class="shopping-cart">
         <div class="shopping-cart-header">
@@ -36,17 +33,18 @@
           <div class="shopping-cart-total">Total:
             <div class="amt">amt</s>
           </div>
-        </div> 
+        </div>
         <ul class="shopping-cart-items">
           <li class="dropdown">
-            <img src=""/>
-            <span>Product Name</span>
+            <img id="cartimg" src="img/50x50.jpeg"/>
+            <span id="cartname">Product Name</span>
             <span class="item-price">$price</span>
             <span class="quantity">Quantity:</span>
           </li>
+          </ul>
         <a href="#" class="button">Checkout</a>
       </div>
-    </div> 
+    </div>
     </div>
           <div class="header-image">
             <h1 class="header-text">Store Name Here</h1>
@@ -57,11 +55,10 @@
           <img src="img/250.png" id="product-image" />
           <ul>
             <li id="price">Price</li>
-            <li id="to-cart">Add to Cart</li>
-            <details>
-              <summary>Description</summary>
-              <li id="description">Description</li>
-            </details>
+            <li id="to-cart"><a href="#" class="num">Add to Cart</a></li>
+  <div class="descbutton">Description</div>
+  <!-- <div class="box"> -->
+    <!-- <div class="descbox"> -->
           </ul>
         </div>
     <script type="text/javascript" src="script.js" defer></script>

@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Hind:wght@300&display=swap");
-
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-
-//Universal selectors
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -19,6 +17,7 @@ body {
 
 html {
   font-size: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -26,56 +25,58 @@ header {
   margin: 0px;
 }
 
-//header image and text styling
 .header-image {
   position: relative;
   margin: 0;
   width: 100%;
   height: 400px;
+  -o-object-fit: contain;
   object-fit: contain;
-  background: url("img/header-placeholder.jpg");
+  background: url("https://i.ibb.co/PNgkhnt/header-placeholder.jpg");
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   background-size: cover;
-  .header-text {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Abril Fatface", cursive;
-    filter: drop-shadow(0.05em 0.05em rgb(119, 116, 109));
-  }
 }
 
-//Navigation bar styling
+.header-image .header-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Abril Fatface", cursive;
+  -webkit-filter: drop-shadow(0.05em 0.05em #77746d);
+  filter: drop-shadow(0.05em 0.05em #77746d);
+}
+
 nav {
   padding: 20px 0 40px 0;
-  background: rgb(73, 80, 87);
+  background: #495057;
   font-size: 16px;
   font-family: "Hind", sans-serif;
-  text-align: center;
+}
 
-  .navbar-left {
-    float: left;
-  }
+nav .navbar-left {
+  float: left;
+}
 
-  .navbar-right {
-    float: right;
-  }
-  ul {
-    li {
-      display: inline;
-      padding-left: 20px;
-      a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-      }
-    }
-  }
+nav .navbar-right {
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
 }
 
 .num {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   border-radius: 6px;
   color: white;
   display: inline-block;
@@ -91,59 +92,57 @@ nav {
   margin: 20px 0;
   position: relative;
   float: right;
-  // display: inline-block;
   background: white;
   width: 320px;
   border-radius: 3px;
   padding: 20px;
   z-index: 1;
-
-  .shopping-cart-header {
-    border: rgb(206, 212, 218);
-    padding-bottom: 15px;
-
-    .shopping-cart-total {
-      float: right;
-    }
-  }
 }
+
+.shopping-cart .shopping-cart-header {
+  border: #ced4da;
+  padding-bottom: 15px;
+}
+
+.shopping-cart .shopping-cart-header .shopping-cart-total {
+  float: right;
+}
+
 .shopping-cart-items {
   padding-top: 20px;
+}
 
-  li {
-    margin-bottom: 17px;
-  }
+.shopping-cart-items li {
+  margin-bottom: 17px;
+}
 
-  img {
-    float: left;
-    margin-right: 12px;
-    height: 50px;
-    width: 50px;
-  }
+.shopping-cart-items img {
+  float: left;
+  margin-right: 12px;
+  height: 50px;
+  width: 50px;
+}
 
-  .item-name {
-    display: block;
-    padding-top: 10px;
-    font-size: 17px;
-  }
+.shopping-cart-items .item-name {
+  display: block;
+  padding-top: 10px;
+  font-size: 17px;
+}
 
-  .item-price {
-    color: rgb(0, 0, 0);
-    margin-right: 10px;
-  }
+.shopping-cart-items .item-price {
+  color: black;
+  margin-right: 10px;
+}
 
-  .item-quantity {
-    color: rgb(0, 0, 0);
-  }
+.shopping-cart-items .item-quantity {
+  color: black;
 }
 
 .shopping-cart:after {
   bottom: 100%;
-  // display: inline-flex;
   float: right;
   height: 0;
   width: 0;
-  // position: flex;
   border: solid transparent;
   pointer-events: none;
   border-color: white;
@@ -152,7 +151,7 @@ nav {
 }
 
 .button {
-  background: rgb(0, 0, 0);
+  background: black;
   color: white;
   text-align: center;
   padding: 12px;
@@ -163,39 +162,67 @@ nav {
   margin: 25px 0 15px 0;
 }
 
-.search-button {
+.items {
+  margin: 10px;
+  width: 20%;
+  height: 20%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.items h3 {
+  font-family: "Abril Fatface", cursive;
+}
+
+.items ul {
+  list-style-type: none;
+  font-family: "Hind", sans-serif;
+}
+
+.items ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+}
+
+.descbutton {
   background-color: rgb(0, 0, 0);
   border-radius: 6px;
   color: white;
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
   padding: 3px 7px;
   text-align: center;
   vertical-align: middle;
 }
 
-.items {
-  margin: 10px;
-  width: 20%;
-  height: 20%;
-  justify-content: center;
-  display: inline-block;
-  h3 {
-    font-family: "Abril Fatface", cursive;
-  }
-  ul {
-    list-style-type: none;
-    font-family: "Hind", sans-serif;
-  }
-  ul li {
-    display: inline;
-    margin-right: 10px;
-  }
+.box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
 }
-details[open] {
-  padding: 0.5em;
-  summary {
-    margin-bottom: 0.5em;
-  }
+.descbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
 }

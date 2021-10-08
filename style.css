@@ -32,7 +32,7 @@ header {
   height: 400px;
   -o-object-fit: contain;
   object-fit: contain;
-  background: url("img/header-placeholder.jpg");
+  background: url("https://i.ibb.co/PNgkhnt/header-placeholder.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   background-size: cover;
@@ -51,7 +51,6 @@ header {
 }
 
 nav {
-  position: relative;
   padding: 20px 0 40px 0;
   background: #495057;
   font-size: 16px;
@@ -163,18 +162,6 @@ nav ul li a {
   margin: 25px 0 15px 0;
 }
 
-.search-button {
-  background-color: black;
-  border-radius: 6px;
-  color: white;
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1;
-  padding: 3px 7px;
-  text-align: center;
-  vertical-align: middle;
-}
-
 .items {
   margin: 10px;
   width: 20%;
@@ -205,5 +192,40 @@ details[open] {
 
 details[open] summary {
   margin-bottom: 0.5em;
+}
+
+.descbutton {
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.descbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
