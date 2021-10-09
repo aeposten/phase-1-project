@@ -4,7 +4,7 @@
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
@@ -31,10 +31,10 @@ header {
   width: 100%;
   height: 400px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   background: url("https://i.ibb.co/PNgkhnt/header-placeholder.jpg");
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+          filter: grayscale(100%);
   background-size: cover;
 }
 
@@ -44,10 +44,10 @@ header {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: "Abril Fatface", cursive;
   -webkit-filter: drop-shadow(0.05em 0.05em #77746d);
-  filter: drop-shadow(0.05em 0.05em #77746d);
+          filter: drop-shadow(0.05em 0.05em #77746d);
 }
 
 nav {
@@ -75,6 +75,11 @@ nav ul li a {
   text-decoration: none;
 }
 
+.cart-holder {
+  margin: auto;
+  width: 80%;
+}
+
 .num {
   background-color: black;
   border-radius: 6px;
@@ -88,12 +93,11 @@ nav ul li a {
 }
 
 .shopping-cart {
-  display: none;
   margin: 20px 0;
-  position: relative;
   float: right;
   background: white;
   width: 320px;
+  position: relative;
   border-radius: 3px;
   padding: 20px;
   z-index: 1;
@@ -108,46 +112,55 @@ nav ul li a {
   float: right;
 }
 
-.shopping-cart-items {
+.shopping-cart .shopping-cart-items {
   padding-top: 20px;
 }
 
-.shopping-cart-items li {
+.shopping-cart .shopping-cart-items li {
   margin-bottom: 17px;
 }
 
-.shopping-cart-items img {
+.shopping-cart .shopping-cart-items img {
   float: left;
   margin-right: 12px;
   height: 50px;
   width: 50px;
 }
 
-.shopping-cart-items .item-name {
+.shopping-cart .shopping-cart-items .item-name {
   display: block;
   padding-top: 10px;
   font-size: 17px;
 }
 
-.shopping-cart-items .item-price {
+.shopping-cart .shopping-cart-items .item-price {
   color: black;
   margin-right: 10px;
 }
 
-.shopping-cart-items .item-quantity {
+.shopping-cart .shopping-cart-items .item-quantity {
   color: black;
 }
 
 .shopping-cart:after {
   bottom: 100%;
-  float: right;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
   height: 0;
   width: 0;
-  border: solid transparent;
+  position: absolute;
   pointer-events: none;
   border-color: white;
   border-width: 8px;
   margin-left: -8px;
+}
+
+.cart-icon {
+  color: black;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
 }
 
 .button {
@@ -162,13 +175,20 @@ nav ul li a {
   margin: 25px 0 15px 0;
 }
 
+.dropdown:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .items {
   margin: 10px;
-  width: 20%;
-  height: 20%;
+  max-width: 25%;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: inline-block;
 }
 
@@ -184,14 +204,6 @@ nav ul li a {
 .items ul li {
   display: inline;
   margin-right: 10px;
-}
-
-details[open] {
-  padding: 0.5em;
-}
-
-details[open] summary {
-  margin-bottom: 0.5em;
 }
 
 .descbutton {
@@ -222,9 +234,10 @@ details[open] summary {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: white;
   padding: 1rem 1.5rem;
   width: 24rem;
   border-radius: 0.5rem;
 }
+/*# sourceMappingURL=style.css.map */

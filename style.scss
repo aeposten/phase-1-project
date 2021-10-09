@@ -5,56 +5,52 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@@ -18,6 +17,7 @@ body {
+body {
+  font-family: "Hind", sans-serif;
+  margin: 0px;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+}
 
 html {
   font-size: 100%;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@@ -30,8 +30,10 @@ header {
+header {
+  margin: 0px;
+}
+
+.header-image {
+  position: relative;
   margin: 0;
   width: 100%;
   height: 400px;
-  -o-object-fit: contain;
   object-fit: contain;
   background: url("https://i.ibb.co/PNgkhnt/header-placeholder.jpg");
-  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   background-size: cover;
 }
-@@ -41,44 +43,40 @@ header {
+
+.header-image .header-text {
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: "Abril Fatface", cursive;
   filter: drop-shadow(0.05em 0.05em rgb(119, 116, 109));
-  -webkit-filter: drop-shadow(0.05em 0.05em #77746d);
-  filter: drop-shadow(0.05em 0.05em #77746d);
 }
 
 nav {
   padding: 20px 0 40px 0;
   background: rgb(73, 80, 87);
-  background: #495057;
   font-size: 16px;
   font-family: "Hind", sans-serif;
-}
-
-nav .navbar-left {
-  float: left;
-}
-
-nav .navbar-right {
-  float: right;
-}
 
   .navbar-left {
     float: left;
@@ -75,143 +71,116 @@ nav .navbar-right {
   }
 }
 
-// .cart-holder {
-//   margin: auto;
-//   position: absolute;
-//   // width: 80%;
-// }
-nav ul li {
-  display: inline;
-  padding-left: 20px;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
+.cart-holder {
+  margin: auto;
+  width: 80%;
 }
 
 .num {
   background-color: rgb(0, 0, 0);
-  background-color: black;
   border-radius: 6px;
   color: white;
   display: inline-block;
-@@ -94,59 +92,57 @@ nav {
+  font-size: 10px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.shopping-cart {
   margin: 20px 0;
-  position: relative;
   float: right;
-  // display: inline-block;
   background: white;
   width: 320px;
+  position: relative;
   border-radius: 3px;
   padding: 20px;
   z-index: 1;
-}
 
   .shopping-cart-header {
     border: rgb(206, 212, 218);
     padding-bottom: 15px;
-.shopping-cart .shopping-cart-header {
-  border: #ced4da;
-  padding-bottom: 15px;
-}
 
     .shopping-cart-total {
       float: right;
     }
   }
-.shopping-cart .shopping-cart-header .shopping-cart-total {
-  float: right;
-}
 
-.shopping-cart-items {
-  padding-top: 20px;
-}
+  .shopping-cart-items {
+    padding-top: 20px;
 
-  li {
-    margin-bottom: 17px;
+    li {
+      margin-bottom: 17px;
+    }
+
+    img {
+      float: left;
+      margin-right: 12px;
+      height: 50px;
+      width: 50px;
+    }
+
+    .item-name {
+      display: block;
+      padding-top: 10px;
+      font-size: 17px;
+    }
+
+    .item-price {
+      color: rgb(0, 0, 0);
+      margin-right: 10px;
+    }
+
+    .item-quantity {
+      color: rgb(0, 0, 0);
+    }
   }
-.shopping-cart-items li {
-  margin-bottom: 17px;
-}
-
-  img {
-    float: left;
-    margin-right: 12px;
-    height: 50px;
-    width: 50px;
-  }
-.shopping-cart-items img {
-  float: left;
-  margin-right: 12px;
-  height: 50px;
-  width: 50px;
-}
-
-  .item-name {
-    display: block;
-    padding-top: 10px;
-    font-size: 17px;
-  }
-.shopping-cart-items .item-name {
-  display: block;
-  padding-top: 10px;
-  font-size: 17px;
-}
-
-  .item-price {
-    color: rgb(0, 0, 0);
-    margin-right: 10px;
-  }
-.shopping-cart-items .item-price {
-  color: black;
-  margin-right: 10px;
-}
-
-  .item-quantity {
-    color: rgb(0, 0, 0);
-  }
-.shopping-cart-items .item-quantity {
-  color: black;
 }
 
 .shopping-cart:after {
   bottom: 100%;
-  // display: inline-flex;
-  float: right;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
   height: 0;
   width: 0;
-  // position: flex;
-  border: solid transparent;
+  position: absolute;
   pointer-events: none;
   border-color: white;
-@@ -155,7 +151,7 @@ nav {
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.cart-icon {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
 }
 
 .button {
   background: rgb(0, 0, 0);
-  background: black;
   color: white;
   text-align: center;
   padding: 12px;
-@@ -166,34 +162,67 @@ nav {
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  font-size: 17px;
   margin: 25px 0 15px 0;
 }
 
-// .dropdown:after {
-//   content: "";
-//   // display: flex;
-//   // float: right;
-//   clear: both;
-// }
-
+.dropdown:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .items {
   margin: 10px;
-  width: 20%;
-  height: 20%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  max-width: 25%;
   justify-content: center;
+  flex-wrap: wrap;
   display: inline-block;
   h3 {
     font-family: "Abril Fatface", cursive;
@@ -225,32 +194,6 @@ nav ul li a {
     margin-right: 10px;
   }
 }
-
-.items h3 {
-  font-family: "Abril Fatface", cursive;
-}
-
-.items ul {
-  list-style-type: none;
-  font-family: "Hind", sans-serif;
-}
-
-.items ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-details[open] {
-  padding: 0.5em;
-  summary {
-    margin-bottom: 0.5em;
-  }
-}
-
-details[open] summary {
-  margin-bottom: 0.5em;
-}
-
 .descbutton {
   background-color: rgb(0, 0, 0);
   border-radius: 6px;
@@ -282,4 +225,4 @@ details[open] summary {
   padding: 1rem 1.5rem;
   width: 24rem;
   border-radius: 0.5rem;
-} 
+}
