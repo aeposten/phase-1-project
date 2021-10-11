@@ -1,4 +1,4 @@
-// retrevives data for  the store page
+// retrieves data for  the store page
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then((e) => storeImage(e));
@@ -26,7 +26,7 @@ console.log(searchLoc);
 
 // storeImage is what displays all the items for the store
 function storeImage(e) {
-  // we use a for loop to seperate the object into individual products
+  // we use a for loop to separate the object into individual products
 
   console.log(e);
   for (let pro of e) {
@@ -55,19 +55,19 @@ function storeImage(e) {
     let body = document.querySelector("body");
     body.append(proloc1);
 
-    descLoc.addEventListener("click", (e) => {
-      console.log(e.target.innerHTML);
-      old = e.target.innerHTML;
-      let newdesc = prompt(`Please enter a new description:`, old);
-      descLoc.innerHTML = newdesc;
-    });
+    // descLoc.addEventListener("click", (e) => {
+    //   console.log(e.target.innerHTML);
+    //   old = e.target.innerHTML;
+    //   let newdesc = prompt(`Please enter a new description:`, old);
+    //   descLoc.innerHTML = newdesc;
+    // });
 
-    pricLoc.addEventListener("click", (e) => {
-      console.log(e.target.innerHTML);
-      old = e.target.innerHTML;
-      let newdesc = prompt(`Please enter a new pricw: `, old);
-      pricLoc.innerHTML = `$${newdesc}`;
-    });
+    // pricLoc.addEventListener("click", (e) => {
+    //   console.log(e.target.innerHTML);
+    //   old = e.target.innerHTML;
+    //   let newdesc = prompt(`Please enter a new pricw: `, old);
+    //   pricLoc.innerHTML = `$${newdesc}`;
+    // });
 
     /// SHOPPING CART GOES HERE
 
@@ -77,7 +77,7 @@ function storeImage(e) {
       numCounter = numCounter + 1;
       numLoc.innerHTML = numCounter;
       // this works like the store image function does.
-      // it will append the item to the shoping cart node, then clone that node and move on to the next node
+      // it will append the item to the shopping cart node, then clone that node and move on to the next node
 
       // the counter allows us to move to the next cart node
       let cartnum = 0;
@@ -97,7 +97,7 @@ function storeImage(e) {
       let priceOfItem = pricLoc.innerHTML.slice(1);
       let nameOfItem = nameLoc.innerHTML;
 
-      // Parse float just makes sure that total is formated correctly.
+      // Parse float just makes sure that total is formatted correctly.
       total = parseFloat(total, 10) + parseFloat(priceOfItem, 10);
       total = total.toFixed(2);
 
@@ -110,11 +110,11 @@ function storeImage(e) {
       };
 
       console.log;
-      // this is used to determain if this is the first time if this has been fun.
+      // this is used to determine if this is the first time if this has been fun.
       if (cartArray == undefined) {
         cartArray = [];
 
-        /// here we assin the keys to the cart object and add the cart ocject to the cart array
+        /// here we assign the keys to the cart object and add the cart object to the cart array
         cartObjTrue.name = nameOfItem;
         cartObjTrue.image = imgLoc.src;
         cartObjTrue.price = priceOfItem;
@@ -160,8 +160,8 @@ function storeImage(e) {
 
   // making a variable to make this cleaner
   let i = document.querySelectorAll(".items").length;
-  //  The first node and last node are repated. This checks to see if there is more than one node
-  // if there is it will delete the first one so that it isn't repated
+  //  The first node and last node are repeated. This checks to see if there is more than one node
+  // if there is it will delete the first one so that it isn't repeated
   if (i > 1) {
     document.querySelector(".items").remove();
   }
@@ -196,29 +196,12 @@ function search(search) {
     });
 }
 
-let modal = document.querySelector(".box");
-let show = document.querySelector(".descbutton");
-let closeButton = document.querySelector(".closedesc");
+// let storeNameLoc = document.querySelector("h1");
+// let storeNameLoc2 = document.querySelector(".navbar-left").children[0];
 
-function toggleModal() {
-  console.log("hi");
-  modal.classList.toggle("show-modal");
-}
-function windowOnClick(event) {
-  console.log(event.target);
-  console.log(modal.parentNode.childNodes[5]);
-  if (event.target === modal.parentNode) {
-    console.log("hi");
-    toggleModal();
-  }
-}
-
-let storeNameLoc = document.querySelector("h1");
-let storeNameLoc2 = document.querySelector(".navbar-left").children[0];
-
-storeNameLoc.addEventListener("click", () => {
-  console.log(storeNameLoc2);
-  let storeName = prompt("Please enter your store's name", "Store Name");
-  storeNameLoc.innerHTML = storeName;
-  storeNameLoc2.innerHTML = storeName;
-});
+// storeNameLoc.addEventListener("click", () => {
+//   console.log(storeNameLoc2);
+//   let storeName = prompt("Please enter your store's name", "Store Name");
+//   storeNameLoc.innerHTML = storeName;
+//   storeNameLoc2.innerHTML = storeName;
+// });

@@ -89,6 +89,7 @@ nav {
 }
 
 .shopping-cart {
+  display: none;
   margin: 20px 0;
   float: right;
   background: white;
@@ -136,20 +137,6 @@ nav {
       color: rgb(0, 0, 0);
     }
   }
-}
-
-.shopping-cart:after {
-  bottom: 100%;
-  left: 89%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: white;
-  border-width: 8px;
-  margin-left: -8px;
 }
 
 .cart-icon {

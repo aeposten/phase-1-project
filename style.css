@@ -93,6 +93,7 @@ nav ul li a {
 }
 
 .shopping-cart {
+  display: none;
   margin: 20px 0;
   float: right;
   background: white;
@@ -140,20 +141,6 @@ nav ul li a {
 
 .shopping-cart .shopping-cart-items .item-quantity {
   color: black;
-}
-
-.shopping-cart:after {
-  bottom: 100%;
-  left: 89%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: white;
-  border-width: 8px;
-  margin-left: -8px;
 }
 
 .cart-icon {
